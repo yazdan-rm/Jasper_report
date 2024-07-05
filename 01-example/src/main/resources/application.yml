@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: demo
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/jasper_report
+    username: jasper-report
+    password: jasper-report
+
+
+  jpa:
+    show-sql: true
+
+
