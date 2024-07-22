@@ -24,22 +24,3 @@ where org.is_deleted = 0
 group by mat.field_id, mat.rps_id, mat.DEF_RPS_TYPE_ID
 order by mat.field_id, mat.rps_id;
 
-
-
-select * from REPORT_ORGANIZING_COMPLETE_DEF_RPS_MATV mat
-where mat.IS_NEED_APPROVE = 1 and mat.ISAPPROVED = 1;
-
-
-
-select mat.*
-                    FROM REPORT_ORGANIZING_COMPLETE_DEF_RPS_MATV mat
-                    where mat.hozeh_id = 50375
-                      and mat.field_id in (110)
-                      and mat.rps_id in (1242, 1244, 1243, 101, 1105)
-                      and mat.def_rps_type_id in (304, 305, 306, 537)
-                      and mat.def_rps_cortex_id in (154004)
-                      and ((mat.isApproved = 1 and mat.is_need_approve = 1) or mat.is_need_approve = 0);
-
-
-
-select * from org$membership_organizing;
