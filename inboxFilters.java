@@ -3,10 +3,8 @@ package ir.rbp.nabreport.dao.inbox.strategy;
 import ir.rbp.nabcore.controller.exception.CustomParameterizeException;
 import ir.rbp.nabcore.controller.exception.ErrorConstantsCore;
 import ir.rbp.nabreport.common.enumeration.pvs.EN_OrgTypeLayerNum;
+import ir.rbp.nabreport.common.enumeration.pvs.EN_UserRequestReportType;
 import ir.rbp.nabreport.model.viewmodel.inbox.UserRequestReportVM;
-import ir.rbp.nabreport.service.externalservice.org.IOrganizationService;
-import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 
 import java.time.LocalDate;
@@ -16,10 +14,9 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-@Setter(onMethod_ = {@Autowired})
 public abstract class AbstractUserRequestReportStrategy {
 
-    private IOrganizationService organizationService;
+    public abstract EN_UserRequestReportType getReportType();
 
     public abstract ClassPathResource getJasperFile();
 
